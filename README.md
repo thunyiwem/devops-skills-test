@@ -8,10 +8,17 @@ Please fork this repository and answer any questions on this markdown document.
 
 # Linux
 * What is the command to list the contents of a direcory, line by line and ordered by size ascending in human readable format?
+ ls -ltrhs
 * How would you add a DNS server to a network interface in Linux?
+DNS1=x.x.x.x
 * If the DNS server you've just added is not reachable, how can you get any particular hostname to resolve locally? 
+Updated "/etc/hosts"
 * How would you check for SELinux related errors?
+Check "audit.log"
 * Write the commands to add 30GB disk space to a logical volume named "docker" that belongs to a logical group named "docker-group".
+vgcreate docker /dev/sdX
+lvcreate -l 100%FREE -n docker-group docker
+
 * In the root of this repository, create a Bash script called "listit.sh", when executed, this script must do the following (in order):
     * Create a file called directories.list that contains the directory names only of the current directory.
     * Add a line at the beginning of the directories.list file that reads "line one's line".
